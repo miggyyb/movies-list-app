@@ -1,0 +1,11 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: skyblue;
+    text-align: center;
+}
+.container {
+    width:auto;
+    height:100vh;
+    background-image: url(../assets/Empty-movie-theater-with-red-seats.jpg);
+    background-size: cover;
+}

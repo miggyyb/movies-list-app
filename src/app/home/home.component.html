@@ -1,0 +1,22 @@
+<div class="button-container">
+    <button (click)="sortMoviesTitleAsc()">Sort Ascending (Title)</button>
+    <button (click)="sortMoviesDateAsc()">Sort Ascending (Date)</button>
+</div>
+<button (click)="sortMoviesTitleDesc()">Sort Descending (Title)</button>
+<button (click)="sortMoviesDateDesc()">Sort Descending (Date)</button>
+<div *ngFor="let movie of movies">
+    <div style="float:left;height:50px;">
+        <a [routerLink]="movie.route">
+            <img [src]='movie.image'/>
+        </a>
+        <div class="watchlist-checklist">
+            <label>
+                Add to Watchlist <input type="checkbox" [checked]="movie.isFav" (change)="Watched($event)"/>
+            </label>
+        </div>
+        <!--<h4 *ngIf="movie.isFav == true">In Watchlist</h4>
+        <h4 *ngIf="movie.isFav == false">Not in Watchlist</h4>-->
+    </div>
+</div>
+<app-list-movies [movies]="movies"></app-list-movies>
+
